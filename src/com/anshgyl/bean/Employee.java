@@ -19,6 +19,28 @@ public class Employee {
     private Set<Dependent> dependents = new HashSet<>();
     private HashMap<Project, Float> hours = new HashMap<>();
 
+    public Employee() {
+    }
+
+    public Employee(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public Employee(String address, Date bdate, Department department, String fname, String lname, Character minit, Float salary, Character sex, String ssn, Employee manager, Set<Dependent> dependents, HashMap<Project, Float> hours) {
+        this.address = address;
+        this.bdate = bdate;
+        this.department = department;
+        this.fname = fname;
+        this.lname = lname;
+        this.minit = minit;
+        this.salary = salary;
+        this.sex = sex;
+        this.ssn = ssn;
+        this.manager = manager;
+        this.dependents = dependents;
+        this.hours = hours;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -113,5 +135,23 @@ public class Employee {
 
     public void setHours(HashMap<Project, Float> hours) {
         this.hours = hours;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "address='" + address + '\'' +
+                ", bdate=" + bdate +
+                ", department=" + department +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", minit=" + minit +
+                ", salary=" + salary +
+                ", sex=" + sex +
+                ", ssn='" + ssn + '\'' +
+                ", manager=" + manager +
+                ", dependents=" + dependents +
+                ", hours=" + hours +
+                '}';
     }
 }

@@ -1,8 +1,10 @@
 package com.anshgyl;
 
+import com.anshgyl.service.impl.EmployeeServiceImpl;
+
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+        new EmployeeServiceImpl().showAllEmployees();
     }
 }

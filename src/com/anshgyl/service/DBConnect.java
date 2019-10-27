@@ -25,14 +25,11 @@ public class DBConnect {
             this.username = prop.getProperty("db.user");
             this.password = prop.getProperty("db.password");
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName(prop.getProperty("db.driver"));
             connection = DriverManager.getConnection(url, username, password);
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        } catch (IOException | ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace();
         }
     }
 

@@ -48,4 +48,15 @@ public class Project {
     public void setHours(HashMap<Employee, Float> hours) {
         this.hours = hours;
     }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "pname='" + pname + '\'' +
+                ", pnumber=" + pnumber +
+                ", plocation='" + plocation + '\'' +
+                ", department=" + department +
+                ", hours=" + hours +
+                '}';
+    }
 }

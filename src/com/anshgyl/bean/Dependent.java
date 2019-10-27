@@ -48,4 +48,15 @@ public class Dependent {
     public void setRelationship(String relationship) {
         this.relationship = relationship;
     }
+
+    @Override
+    public String toString() {
+        return "Dependent{" +
+                "employee=" + employee +
+                ", dependent_name='" + dependent_name + '\'' +
+                ", sex=" + sex +
+                ", date=" + date +
+                ", relationship='" + relationship + '\'' +
+                '}';
+    }
 }

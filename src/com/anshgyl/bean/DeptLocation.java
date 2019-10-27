@@ -1,9 +1,6 @@
 package com.anshgyl.bean;
 
-import java.util.HashSet;
-import java.util.Set;
-
-public class Dept_Location {
+public class DeptLocation {
     private Department department;
     private String dlocation;
 
@@ -21,5 +18,13 @@ public class Dept_Location {
 
     public void setDlocation(String dlocation) {
         this.dlocation = dlocation;
+    }
+
+    @Override
+    public String toString() {
+        return "DeptLocation{" +
+                "department=" + department +
+                ", dlocation='" + dlocation + '\'' +
+                '}';
     }
 }
