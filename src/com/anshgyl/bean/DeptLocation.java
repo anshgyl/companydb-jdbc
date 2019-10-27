@@ -1,7 +1,10 @@
 package com.anshgyl.bean;
 
 public class DeptLocation {
+
+    //To map the object fetched from dnumber
     private Department department;
+
     private String dlocation;
 
     public Department getDepartment() {

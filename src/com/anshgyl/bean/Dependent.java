@@ -3,7 +3,10 @@ package com.anshgyl.bean;
 import java.util.Date;
 
 public class Dependent {
+
+    //To map the object fetched from essn
     private Employee employee;
+
     private String dependent_name;
     private Character sex;
     private Date date;

@@ -9,8 +9,14 @@ public class Department {
     private Integer dnumber;
     private Date mgr_start_date;
     private DeptLocation location;
+
+    //For mapping One-to-Many Relationship between Department and Projects
     private Set<Project> projects = new HashSet<>();
+
+    //For mapping One-to-Many Relationship between Department and Employees
     private Set<Employee> employees = new HashSet<>();
+
+    //To map the object fetched from mgr_ssn
     private Employee manager;
 
     public Department() {

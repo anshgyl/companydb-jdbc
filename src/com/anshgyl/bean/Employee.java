@@ -8,15 +8,24 @@ import java.util.Set;
 public class Employee {
     private String address;
     private Date bdate;
+
+    //To map the object fetched from dno
     private Department department;
+
     private String fname;
     private String lname;
     private Character minit;
     private Float salary;
     private Character sex;
     private String ssn;
+
+    //To map the object fetched from super_ssn
     private Employee manager;
+
+    //For mapping One-to-Many Relationship between Employee and Dependent
     private Set<Dependent> dependents = new HashSet<>();
+
+    //For mapping Many-to-Many Relationship between Employee and Projects, also one extra parameter from works_on (hours)
     private HashMap<Project, Float> hours = new HashMap<>();
 
     public Employee() {

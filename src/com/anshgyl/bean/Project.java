@@ -6,7 +6,11 @@ public class Project {
     private String pname;
     private Integer pnumber;
     private String plocation;
+
+    //To map the object fetched from dnum
     private Department department;
+
+    //For mapping Many-to-Many Relationship between Project and Employees, also one extra parameter from works_on (hours)
     private HashMap<Employee, Float> hours = new HashMap<>();
 
     public String getPname() {

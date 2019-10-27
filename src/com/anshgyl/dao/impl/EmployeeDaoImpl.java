@@ -10,10 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDaoImpl implements EmployeeDao {
+    private DBConnect dbConnect = new DBConnect();
     @Override
     public List<Employee> findAllEmployee() {
         String sql = "SELECT * FROM employee";
-        ResultSet rs = new DBConnect().executeQuery(sql);
+        ResultSet rs = dbConnect.executeQuery(sql);
         Employee employee;
         List<Employee> allEmployees = new ArrayList<>();
 
@@ -45,7 +46,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 "VALUES " +
                 "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        Connection connection = new DBConnect().getConnection();
+        Connection connection = dbConnect.getConnection();
         PreparedStatement preparedStatement;
         try {
             preparedStatement = connection.prepareStatement(sql);
